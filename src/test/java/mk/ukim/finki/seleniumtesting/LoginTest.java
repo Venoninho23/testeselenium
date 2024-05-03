@@ -30,7 +30,7 @@ public class LoginTest {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
         assertTrue(loginPage.isLoaded());
-        loginPage.login("gabdimitrievski111@gmail.com", "wrong_password_test");
+        loginPage.login("gokus.silvasouza@gmail.com", "senha_test");
         String errorMessage = loginPage.getErrorMessage();
         assertEquals(errorMessage, "The password you’ve entered is incorrect. Forgot Password?");
 
@@ -51,7 +51,7 @@ public class LoginTest {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
         assertTrue(loginPage.isLoaded());
-        loginPage.login("gabdimitrievski111@gmail.com", "correct_password");
+        loginPage.login("gokus.silvasouza@gmail.com", "senha_errada");
         assertTrue(new HomePage(driver).isLoaded());
     }
 
